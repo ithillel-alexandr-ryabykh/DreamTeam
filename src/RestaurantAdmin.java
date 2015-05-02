@@ -3,6 +3,7 @@ public class RestaurantAdmin {
 	double date;
 	int[] tables;
 	char[] ordersForDay;
+	Order order;
 
 	void orderCancel() {
 

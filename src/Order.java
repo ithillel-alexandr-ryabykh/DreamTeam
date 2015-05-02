@@ -1,7 +1,10 @@
-public class Order extends RestaurantAdmin {
+public class Order {
 	String id;
 	char[] dishes;
 	int tableNumber;
+	Client client;
+	Dishes dish;
+	Services service;
 
 	void dishAvailability() {
 
@@ -22,5 +25,4 @@ public class Order extends RestaurantAdmin {
 		this.tableNumber = tableNumber;
 	}
 
-	
 }

@@ -1,8 +1,4 @@
-public class Dishes extends Order {
-	public Dishes(String id, char[] dishes, int tableNumber) {
-		super(id, dishes, tableNumber);
-		// TODO Auto-generated constructor stub
-	}
+public class Dishes {
 
 	String dishName;
 	int dishCost;
@@ -22,7 +18,6 @@ public class Dishes extends Order {
 
 	public Dishes(String id, char[] dishes, int tableNumber, String dishName,
 			int dishCost, boolean dishAvailability) {
-		super(id, dishes, tableNumber);
 		this.dishName = dishName;
 		this.dishCost = dishCost;
 		this.dishAvailability = dishAvailability;
@@ -51,5 +46,5 @@ public class Dishes extends Order {
 	public void setDishAvailability(boolean dishAvailability) {
 		this.dishAvailability = dishAvailability;
 	}
-	
+
 }
