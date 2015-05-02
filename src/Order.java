@@ -1,6 +1,6 @@
 public class Order {
 	String id;
-	char[] dishes;
+	String[] dishes;
 	int tableNumber;
 	Client client;
 	Dishes dish;
@@ -18,7 +18,7 @@ public class Order {
 
 	}
 
-	public Order(String id, char[] dishes, int tableNumber) {
+	public Order(String id, String[] dishes, int tableNumber) {
 		super();
 		this.id = id;
 		this.dishes = dishes;

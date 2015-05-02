@@ -2,7 +2,7 @@ public class RestaurantAdmin {
 	double time;
 	double date;
 	int[] tables;
-	char[] ordersForDay;
+	String[] ordersForDay;
 	Order order;
 
 	void orderCancel() {
@@ -10,7 +10,7 @@ public class RestaurantAdmin {
 	}
 
 	public RestaurantAdmin(double time, double date, int[] tables,
-			char[] ordersForDay) {
+			String[] ordersForDay) {
 		super();
 		this.time = time;
 		this.date = date;
@@ -46,11 +46,11 @@ public class RestaurantAdmin {
 		this.tables = tables;
 	}
 
-	public char[] getOrdersForDay() {
+	public String [] getOrdersForDay() {
 		return ordersForDay;
 	}
 
-	public void setOrdersForDay(char[] ordersForDay) {
+	public void setOrdersForDay(String[] ordersForDay) {
 		this.ordersForDay = ordersForDay;
 	}
 
