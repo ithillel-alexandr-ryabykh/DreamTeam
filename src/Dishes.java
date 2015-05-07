@@ -4,15 +4,15 @@ public class Dishes {
 	int dishCost;
 	boolean dishAvailability;
 
+	void dishAvailability() {
+
+	}
+
 	void changeDishName() {
 
 	}
 
 	void changeDishCost() {
-
-	}
-
-	void changeDishAvailability() {
 
 	}
 

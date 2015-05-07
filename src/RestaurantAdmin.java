@@ -1,42 +1,30 @@
+import java.util.Date;
+
 public class RestaurantAdmin {
-	double time;
-	double date;
+	Date date;
 	int[] tables;
 	String[] ordersForDay;
 	Order order;
 
-	void orderCancel() {
-
-	}
+	
 
 	public RestaurantAdmin(double time, double date, int[] tables,
 			String[] ordersForDay) {
 		super();
-		this.time = time;
-		this.date = date;
 		this.tables = tables;
 		this.ordersForDay = ordersForDay;
 	}
 
-	public RestaurantAdmin() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public double getTime() {
-		return time;
-	}
-
-	public void setTime(double time) {
-		this.time = time;
-	}
-
-	public double getDate() {
+		
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(double date) {
+
+	public void setDate(Date date) {
 		this.date = date;
 	}
+
 
 	public int[] getTables() {
 		return tables;

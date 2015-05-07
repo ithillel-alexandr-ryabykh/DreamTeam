@@ -1,9 +1,8 @@
 public class Client {
 	String name;
-	int telNumber;
+	String telNumber;
 
-	public Client(String id, char[] dishes, int tableNumber, String name,
-			int telNumber) {
+	public Client(String name, String telNumber) {
 		this.name = name;
 		this.telNumber = telNumber;
 	}
@@ -16,11 +15,11 @@ public class Client {
 		this.name = name;
 	}
 
-	public int getTelNumber() {
+	public String getTelNumber() {
 		return telNumber;
 	}
 
-	public void setTelNumber(int telNumber) {
+	public void setTelNumber(String telNumber) {
 		this.telNumber = telNumber;
 	}
 
