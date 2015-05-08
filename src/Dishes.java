@@ -16,8 +16,8 @@ public class Dishes {
 
 	}
 
-	public Dishes(String id, char[] dishes, int tableNumber, String dishName,
-			int dishCost, boolean dishAvailability) {
+	public Dishes(String id, String dishName, int dishCost,
+			boolean dishAvailability) {
 		this.dishName = dishName;
 		this.dishCost = dishCost;
 		this.dishAvailability = dishAvailability;

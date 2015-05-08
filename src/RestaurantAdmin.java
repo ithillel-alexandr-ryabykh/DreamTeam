@@ -1,30 +1,26 @@
+import java.util.Calendar;
 import java.util.Date;
 
 public class RestaurantAdmin {
 	Date date;
+	Calendar calendar;
 	int[] tables;
 	String[] ordersForDay;
 	Order order;
 
-	
+	public RestaurantAdmin(int[] tables, String[] ordersForDay) {
 
-	public RestaurantAdmin(double time, double date, int[] tables,
-			String[] ordersForDay) {
-		super();
 		this.tables = tables;
 		this.ordersForDay = ordersForDay;
 	}
 
-		
 	public Date getDate() {
 		return date;
 	}
 
-
 	public void setDate(Date date) {
 		this.date = date;
 	}
-
 
 	public int[] getTables() {
 		return tables;
@@ -34,7 +30,7 @@ public class RestaurantAdmin {
 		this.tables = tables;
 	}
 
-	public String [] getOrdersForDay() {
+	public String[] getOrdersForDay() {
 		return ordersForDay;
 	}
 

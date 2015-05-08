@@ -8,8 +8,7 @@ public class Services {
 
 	}
 
-	public Services(String id, char[] dishes, int tableNumber,
-			boolean orderType, boolean taxy, int prepayment) {
+	public Services(boolean orderType, boolean taxy, int prepayment) {
 
 		this.orderType = orderType;
 		this.taxy = taxy;

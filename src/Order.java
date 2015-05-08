@@ -5,7 +5,7 @@ public class Order {
 	Client client;
 	Dishes dish;
 	Services service;
-	
+
 	void orderCancel() {
 
 	}
