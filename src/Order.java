@@ -1,6 +1,7 @@
+import java.util.*;
 public class Order {
 	String id;
-	String[] dishes;
+	List dishes = new ArrayList();
 	int tableNumber;
 	Client client;
 	Dishes dish;
@@ -18,7 +19,7 @@ public class Order {
 
 	}
 
-	public Order(String id, String[] dishes, int tableNumber) {
+	public Order(String id, List dishes, int tableNumber) {
 		super();
 		this.id = id;
 		this.dishes = dishes;

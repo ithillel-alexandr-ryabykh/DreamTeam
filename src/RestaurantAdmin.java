@@ -1,14 +1,16 @@
 import java.util.Calendar;
+import java.util.*;
 import java.util.Date;
+import java.util.List;
 
 public class RestaurantAdmin {
 	Date date;
 	Calendar calendar;
-	int[] tables;
-	String[] ordersForDay;
+	List tables = new ArrayList();
+	List ordersForDay = new ArrayList();
 	Order order;
 
-	public RestaurantAdmin(int[] tables, String[] ordersForDay) {
+	public RestaurantAdmin(List tables, List ordersForDay) {
 
 		this.tables = tables;
 		this.ordersForDay = ordersForDay;
@@ -22,19 +24,19 @@ public class RestaurantAdmin {
 		this.date = date;
 	}
 
-	public int[] getTables() {
+	public List getTables() {
 		return tables;
 	}
 
-	public void setTables(int[] tables) {
+	public void setTables(List tables) {
 		this.tables = tables;
 	}
 
-	public String[] getOrdersForDay() {
+	public List getOrdersForDay() {
 		return ordersForDay;
 	}
 
-	public void setOrdersForDay(String[] ordersForDay) {
+	public void setOrdersForDay(List ordersForDay) {
 		this.ordersForDay = ordersForDay;
 	}
 
