@@ -1,9 +1,15 @@
 package org.hillel.it.dreamteam.model.entity;
 
+import java.util.List;
+
 public class Dishes {
-	String dishName;
-	int dishCost;
-	boolean dishAvailability;
+	//связать блюдо+цена+ид либо Map
+	private List<Dishes> dishes;
+	private int dishId;
+	private String dishName;
+	private float dishCost;
+	private boolean dishAvailability;
+	private byte[] picture;
 
 	void dishAvailability() {
 
@@ -17,11 +23,25 @@ public class Dishes {
 
 	}
 
-	public Dishes(String id, String dishName, int dishCost,
+	public Dishes(List<Dishes> dishes, String dishName, float dishCost,
 			boolean dishAvailability) {
+		super();
+		this.dishes = dishes;
 		this.dishName = dishName;
 		this.dishCost = dishCost;
 		this.dishAvailability = dishAvailability;
+	}
+
+	public int getDishId() {
+		return dishId;
+	}
+
+	public void setDishId(int dishId) {
+		this.dishId = dishId;
+	}
+
+	public void setDishCost(float dishCost) {
+		this.dishCost = dishCost;
 	}
 
 	public String getDishName() {
@@ -32,7 +52,7 @@ public class Dishes {
 		this.dishName = dishName;
 	}
 
-	public int getDishCost() {
+	public float getDishCost() {
 		return dishCost;
 	}
 
@@ -44,7 +64,24 @@ public class Dishes {
 		return dishAvailability;
 	}
 
+	public List<Dishes> getDishes() {
+		return dishes;
+	}
+
+	public void setDishes(List<Dishes> dishes) {
+		this.dishes = dishes;
+	}
+
+	public byte[] getPicture() {
+		return picture;
+	}
+
+	public void setPicture(byte[] picture) {
+		this.picture = picture;
+	}
+
 	public void setDishAvailability(boolean dishAvailability) {
 		this.dishAvailability = dishAvailability;
 	}
+
 }

@@ -1,19 +1,22 @@
 package org.hillel.it.dreamteam.model.entity;
 
 public class Services {
-	boolean orderType;
-	boolean taxy;
-	int prepayment;
+	private boolean orderType;
+	private boolean taxi;
+	private int discount;// if total dish cost is more than X $
+	private int prepayment;// 30% of all cost,if total dish cost > X $
 
 	void dishCost() {
 
 	}
 
-	public Services(boolean orderType, boolean taxy, int prepayment) {
+	public Services(boolean orderType, boolean taxi, int prepayment,
+			int discount) {
 
 		this.orderType = orderType;
-		this.taxy = taxy;
+		this.taxi = taxi;
 		this.prepayment = prepayment;
+		this.discount = discount;
 	}
 
 	public boolean isOrderType() {
@@ -24,12 +27,12 @@ public class Services {
 		this.orderType = orderType;
 	}
 
-	public boolean isTaxy() {
-		return taxy;
+	public boolean istaxi() {
+		return taxi;
 	}
 
-	public void setTaxy(boolean taxy) {
-		this.taxy = taxy;
+	public void settaxi(boolean taxi) {
+		this.taxi = taxi;
 	}
 
 	public int getPrepayment() {
@@ -38,6 +41,14 @@ public class Services {
 
 	public void setPrepayment(int prepayment) {
 		this.prepayment = prepayment;
+	}
+
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
 	}
 
 }
