@@ -2,17 +2,17 @@ package org.hillel.it.dreamteam.persistence.repository;
 
 import java.util.List;
 
-import org.hillel.it.dreamteam.model.entity.Dishes;
+import org.hillel.it.dreamteam.model.entity.Dish;
 
 public interface DishesRepository {
-	List<Dishes> getDishesByName(String dishName);
+	List<Dish> getDishesByName(String dishName);
 
-	List<Dishes> getAllDishes();
+	List<Dish> getAllDishes();
 
-	int addDish(Dishes dish);
+	int addDish(Dish dish);
 
-	int changeDish(Dishes dish);
+	int changeDish(Dish dish);
 
-	int deleteDish(Dishes dish);
+	int deleteDish(Dish dish);
 
 }

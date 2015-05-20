@@ -1,16 +1,16 @@
 package org.hillel.it.dreamteam.persistence.repository;
 
 import org.hillel.it.dreamteam.model.entity.Order;
-import org.hillel.it.dreamteam.model.entity.Services;
+import org.hillel.it.dreamteam.model.entity.Options;
 
 public interface OrderRepository {
-	Order addOrder(Order order);
+	boolean addOrder(Order order);
 
-	Order changeOrder(Order order, Order newOrder);
+	Order changeOrder(Order newOrder);
 
-	int extraService(Services service, boolean orderType, boolean taxy);
+	Order deleteOrder(Order order);
 
-	int discount(Services service, int discount);
+	boolean extraService(Options service, boolean orderType, boolean taxy,
+			int discount, int prepayment);
 
-	int prepayment(Services service, int prepayment);
 }

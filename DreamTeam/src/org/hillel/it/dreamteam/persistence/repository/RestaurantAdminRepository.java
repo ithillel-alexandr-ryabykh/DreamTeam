@@ -3,10 +3,10 @@ package org.hillel.it.dreamteam.persistence.repository;
 import java.util.*;
 
 import org.hillel.it.dreamteam.model.entity.RestaurantAdmin;
-import org.hillel.it.dreamteam.model.entity.Dishes;
+import org.hillel.it.dreamteam.model.entity.Dish;
 
 public interface RestaurantAdminRepository {
-	int changeDishAvailability(Dishes dishes, boolean dishAvailability);
+	int changeDishAvailability(Dish dishes, boolean dishAvailability);
 
 	int changeOrdersForDay(RestaurantAdmin restaurantAdmin,
 			List<Integer> ordersForDay);

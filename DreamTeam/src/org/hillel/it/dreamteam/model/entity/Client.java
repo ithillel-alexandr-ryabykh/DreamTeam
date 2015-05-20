@@ -1,10 +1,11 @@
 package org.hillel.it.dreamteam.model.entity;
 
-public class Client {
+public class Client extends BaseEntity {
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String telNumber;
+	private ClientType clientType;
 
 	public Client(String firstName, String lastName, String email,
 			String telNumber) {

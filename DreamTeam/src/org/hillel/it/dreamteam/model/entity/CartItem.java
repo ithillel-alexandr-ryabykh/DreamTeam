@@ -1,7 +1,7 @@
 package org.hillel.it.dreamteam.model.entity;
 
-public class CartItem {
-	private Dishes item;
+public class CartItem extends BaseEntity {
+	private Dish item;
 	private int quantity;
 	private String comments;
 
@@ -13,11 +13,11 @@ public class CartItem {
 		this.comments = comments;
 	}
 
-	public Dishes getItem() {
+	public Dish getItem() {
 		return item;
 	}
 
-	public void setItem(Dishes item) {
+	public void setItem(Dish item) {
 		this.item = item;
 	}
 
@@ -34,6 +34,6 @@ public class CartItem {
 	}
 
 	private float calculateTotal() {
-		return item.getDishCost() * quantity;
+		return item.getCost() * quantity;
 	}
 }

@@ -2,20 +2,20 @@ package org.hillel.it.dreamteam.model.entity;
 
 import java.util.*;
 
-public class Cart {
+public class Cart extends BaseEntity {
 	private Client client;
 	private Map<Integer, CartItem> itemMap = Collections
 			.synchronizedMap(new HashMap<Integer, CartItem>());
 
 	private List<CartItem> itemList = new ArrayList<CartItem>();
 
-	public void addDish(Dishes dishes) {
-		CartItem cartItem = (CartItem) itemMap.get(dishes.getDishId());
+	public void addDish(Dish dishes) {
+		CartItem cartItem = (CartItem) itemMap.get(dishes.getId());
 		if (cartItem == null) {
 			cartItem = new CartItem();
 			cartItem.setItem(dishes);
 			cartItem.setQuantity(0);
-			itemMap.put((int) dishes.getDishId(), cartItem);
+			itemMap.put((int) dishes.getId(), cartItem);
 			itemList.add(cartItem);
 		}
 		cartItem.incrementQuantity();
