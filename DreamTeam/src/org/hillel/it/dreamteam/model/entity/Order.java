@@ -1,15 +1,15 @@
 package org.hillel.it.dreamteam.model.entity;
 
 import java.util.*;
+//+registration,login,Order creation,payment;
 
 public class Order extends BaseEntity {
-	private String orderId;
+	private String id;
 	private int tableNumber;
 	private Options options;
 	private Client client;
 	private Dish dish;
 	private Cart cart;
-	private Options service;
 	private List<String> dishes;
 
 	void orderCancel() {
@@ -32,11 +32,11 @@ public class Order extends BaseEntity {
 	}
 
 	public String getOrderId() {
-		return orderId;
+		return id;
 	}
 
 	public void setOrderId(String orderId) {
-		this.orderId = orderId;
+		this.id = orderId;
 	}
 
 	public int getTableNumber() {
@@ -72,11 +72,11 @@ public class Order extends BaseEntity {
 	}
 
 	public Options getService() {
-		return service;
+		return options;
 	}
 
-	public void setService(Options service) {
-		this.service = service;
+	public void setService(Options options) {
+		this.options = options;
 	}
 
 	public List<String> getDishes() {

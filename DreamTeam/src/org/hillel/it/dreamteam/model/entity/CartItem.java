@@ -28,11 +28,12 @@ public class CartItem extends BaseEntity {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
+	
+	//after adding the dish to cart, quantity increases
 	public void incrementQuantity() {
 		quantity++;
 	}
-
+	//calculating of all dish cost
 	private float calculateTotal() {
 		return item.getCost() * quantity;
 	}

@@ -1,4 +1,7 @@
+//pmd for eclipse luna-pmd for eclipse site-copy URL-help-install new soft-past URL
+//add-PMD-OK-PMD for Eclipse 4-next
 package org.hillel.it.dreamteam.model.entity;
+//functions get... change for find
 
 import java.util.Date;
 

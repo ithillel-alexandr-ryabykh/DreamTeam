@@ -4,13 +4,21 @@ import org.hillel.it.dreamteam.model.entity.Order;
 import org.hillel.it.dreamteam.model.entity.Options;
 
 public interface OrderRepository {
-	boolean addOrder(Order order);
 
-	Order changeOrder(Order newOrder);
+	//checking the order by Id
+	void showOrderById(Order order, int id);
+	
+	//checking and adding a new order
+	boolean addOrder(String id);
+	
+	//changing an existing order
+	void changeOrder(Order newOrder);
 
-	Order deleteOrder(Order order);
+	//deleting an existing order
+	void deleteOrder(Order order);
 
-	boolean extraService(Options service, boolean orderType, boolean taxy,
+	//checking and added needed additional services
+	boolean extraService(Options service, boolean delivery, boolean taxy,
 			int discount, int prepayment);
 
 }

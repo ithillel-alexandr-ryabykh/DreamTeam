@@ -2,13 +2,19 @@ package org.hillel.it.dreamteam.model.entity;
 
 public class Options extends BaseEntity {
 	private Order order;
+	private Dish dish;
+	private CartItem cartItem;
 	private boolean delivery;
 	private boolean taxi;
 	private int discount;// if total dish cost is more than X $
 	private int prepayment;// 30% of all cost,if total dish cost > X $
 
-	void dishCost() {
-
+	// checking of total dish cost for discount
+	void dishCost(CartItem cartItem) {
+		//функция в CartItem calculateTotal
+		if(item.getCost()*quantity>5000){
+			discount=0.3*item.getCost()*quantity;
+		}
 	}
 
 	public Options(boolean orderType, boolean taxi, int prepayment, int discount) {

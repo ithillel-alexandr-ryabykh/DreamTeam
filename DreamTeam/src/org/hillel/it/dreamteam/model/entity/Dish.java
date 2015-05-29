@@ -9,7 +9,6 @@ public class Dish extends BaseEntity {
 	private String name;
 	private float cost;
 	private boolean availability;
-	private byte[] picture;
 
 	void dishAvailability() {
 
@@ -71,14 +70,6 @@ public class Dish extends BaseEntity {
 
 	public void setDishes(List<Dish> dishes) {
 		this.dishes = dishes;
-	}
-
-	public byte[] getPicture() {
-		return picture;
-	}
-
-	public void setPicture(byte[] picture) {
-		this.picture = picture;
 	}
 
 }

@@ -6,14 +6,46 @@ public class Client extends BaseEntity {
 	private String email;
 	private String telNumber;
 	private ClientType clientType;
+	private int clientId;
+	private String password;
 
 	public Client(String firstName, String lastName, String email,
-			String telNumber) {
+			String password, String telNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.password = password;
 		this.telNumber = telNumber;
+	}
+
+	//checking if this client already exists
+	public int clientIdEquals(int clientId) {
+		return this.clientId;
+	}
+
+	public ClientType getClientType() {
+		return clientType;
+	}
+
+	public void setClientType(ClientType clientType) {
+		this.clientType = clientType;
+	}
+
+	public int getClientId() {
+		return clientId;
+	}
+
+	public void setClientId(int clientId) {
+		this.clientId = clientId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getFirstName() {
