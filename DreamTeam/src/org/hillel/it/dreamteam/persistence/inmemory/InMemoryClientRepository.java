@@ -22,7 +22,7 @@ public class InMemoryClientRepository implements ClientRepository {
 
 	// checking if the client present,and adding if not
 	@Override
-	public boolean addClient(Client client, int clientId) {
+	public boolean addClient(Client client) {
 		if (getClientById(client.getClientId()) == null) {
 			clients.add(client);
 			return true;
@@ -32,7 +32,7 @@ public class InMemoryClientRepository implements ClientRepository {
 
 	// deleting of existing client
 	@Override
-	public void deleteClient(Client client, int clientId) {
+	public void deleteClient(int clientId) {
 		int clientIndex = getClientIndex(clientId);
 		if (clientIndex > 0) {
 			clients.remove(clientIndex);

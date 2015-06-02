@@ -4,6 +4,22 @@ public class CartItem extends BaseEntity {
 	private Dish item;
 	private int quantity;
 	private String comments;
+	private int discount;// if total dish cost is more than X $
+
+	// checking of total dish cost for discount
+	void dishCost(CartItem cartItem) {
+		if (item.getCost() * quantity > 5000) {
+			discount = (int) (0.3 * item.getCost() * quantity);
+		}
+	}
+
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
 
 	public String getComments() {
 		return comments;
@@ -28,12 +44,13 @@ public class CartItem extends BaseEntity {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
-	//after adding the dish to cart, quantity increases
+
+	// after adding the dish to cart, quantity increases
 	public void incrementQuantity() {
 		quantity++;
 	}
-	//calculating of all dish cost
+
+	// calculating of all dish cost
 	private float calculateTotal() {
 		return item.getCost() * quantity;
 	}
