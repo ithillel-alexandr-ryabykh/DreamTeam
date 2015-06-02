@@ -86,4 +86,9 @@ public class Order extends BaseEntity {
 	public void setDishes(List<String> dishes) {
 		this.dishes = dishes;
 	}
+
+	public void add(Order order) {
+		// TODO Auto-generated method stub
+		
+	}
 }

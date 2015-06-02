@@ -16,7 +16,7 @@ public class InMemoryOrderRepository implements OrderRepository {
 
 	// adding a new order
 	@Override
-	public boolean addOrder(String id) {
+	public boolean addOrder(Order order, String id) {
 		if (getOrderId(order.getOrderId()) == null) {
 			order.add(order);
 			return true;

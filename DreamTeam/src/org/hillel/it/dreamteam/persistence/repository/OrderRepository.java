@@ -9,7 +9,7 @@ public interface OrderRepository {
 	void showOrderById(Order order, int id);
 	
 	//checking and adding a new order
-	boolean addOrder(String id);
+	boolean addOrder(Order order,String id);
 	
 	//changing an existing order
 	void changeOrder(Order newOrder);

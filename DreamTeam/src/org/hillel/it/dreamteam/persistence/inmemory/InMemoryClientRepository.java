@@ -17,7 +17,7 @@ public class InMemoryClientRepository implements ClientRepository {
 				return client;
 			}
 		}
-		return (Integer) null;
+		return (Client) null;
 	}
 
 	// checking if the client present,and adding if not
