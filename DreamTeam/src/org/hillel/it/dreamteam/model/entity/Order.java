@@ -1,6 +1,7 @@
 package org.hillel.it.dreamteam.model.entity;
 
 import java.util.*;
+
 //+registration,login,Order creation,payment;
 
 public class Order extends BaseEntity {
@@ -88,7 +89,6 @@ public class Order extends BaseEntity {
 	}
 
 	public void add(Order order) {
-		// TODO Auto-generated method stub
-		
+
 	}
 }

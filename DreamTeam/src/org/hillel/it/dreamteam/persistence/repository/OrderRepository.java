@@ -12,10 +12,10 @@ public interface OrderRepository {
 	boolean addOrder(Order order,String id);
 	
 	//changing an existing order
-	void changeOrder(Order newOrder);
+	boolean changeOrder(Order existingOrder,Order newOrder);
 
 	//deleting an existing order
-	void deleteOrder(Order order);
+	boolean deleteOrder(Order existingOrder,Order order);
 
 	//checking and added needed additional services
 	boolean extraService(Options service, boolean delivery, boolean taxy,

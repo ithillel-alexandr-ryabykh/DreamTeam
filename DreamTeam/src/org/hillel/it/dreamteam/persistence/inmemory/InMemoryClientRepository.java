@@ -11,7 +11,7 @@ public class InMemoryClientRepository implements ClientRepository {
 
 	// function of client checking by Id
 	@Override
-	public Client getClientById(int clientId) {
+	public Client findClientById(int clientId) {
 		for (Client client : clients) {
 			if (client.getId()==clientId) {
 				return client;
@@ -23,7 +23,7 @@ public class InMemoryClientRepository implements ClientRepository {
 	// checking if the client present,and adding if not
 	@Override
 	public boolean addClient(Client client) {
-		if (getClientById(client.getClientId()) == null) {
+		if (findClientById(client.getClientId()) == null) {
 			clients.add(client);
 			return true;
 		}

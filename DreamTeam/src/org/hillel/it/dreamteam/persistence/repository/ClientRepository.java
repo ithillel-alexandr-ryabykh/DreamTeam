@@ -10,5 +10,5 @@ public interface ClientRepository {
 	void deleteClient(int clientId);
 	
 	//check the Client by Id
-	Client getClientById(int clientId);
+	Client findClientById(int clientId);
 }
