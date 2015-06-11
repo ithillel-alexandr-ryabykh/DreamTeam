@@ -7,25 +7,29 @@ import org.hillel.it.dreamteam.model.entity.Order;
 import org.hillel.it.dreamteam.model.entity.Options;
 
 public class InMemoryOrderRepository implements OrderRepository {
-	List <Order> orderList= new ArrayList<Order>();
+	List<Order> orderList = new ArrayList<Order>();
 
 	// shows the order by Id
 	@Override
-	public void showOrderById(Order order, int id) {
-		return;
+	public Order showOrderById(int id) {
+		for (Order order : orderList) {
+			if (order.getId() == id) {
+				return order;
+			}
+		}
+		return null;
 	}
 
 	// adding a new order
 	@Override
-	public boolean addOrder(Order order, String id) {
-		if (order.getOrderId() == null) {
+	public boolean addOrder(Order order, int id) {
+		if (order.getOrderId() == 0) {
 			order.add(order);
 			return true;
 		}
 		return false;
 	}
 
-	
 	// changing of order
 	@Override
 	public boolean changeOrder(Order existingOrder, Order newOrder) {
@@ -37,8 +41,12 @@ public class InMemoryOrderRepository implements OrderRepository {
 
 	// deleting of existing order
 	@Override
-	public boolean deleteOrder(Order existingOrder, Order order) {
-		return orderList.remove(order);
+	public void deleteOrder(int id) {
+		for (Order order : orderList) {
+			if (order.getId() == id) {
+				orderList.remove(order);
+			}
+		}
 
 	}
 

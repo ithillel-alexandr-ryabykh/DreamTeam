@@ -5,7 +5,7 @@ import java.util.*;
 //+registration,login,Order creation,payment;
 
 public class Order extends BaseEntity {
-	private String id;
+	private int id;
 	private int tableNumber;
 	private Options options;
 	private Client client;
@@ -25,18 +25,18 @@ public class Order extends BaseEntity {
 
 	}
 
-	public Order(String id, List<String> dishes, int tableNumber) {
+	public Order(int id, List<String> dishes, int tableNumber) {
 		super();
 		this.setOrderId(id);
 		this.setDishes(dishes);
 		this.setTableNumber(tableNumber);
 	}
 
-	public String getOrderId() {
+	public int getOrderId() {
 		return id;
 	}
 
-	public void setOrderId(String orderId) {
+	public void setOrderId(int orderId) {
 		this.id = orderId;
 	}
 

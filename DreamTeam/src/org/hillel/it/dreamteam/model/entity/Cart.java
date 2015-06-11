@@ -4,13 +4,13 @@ import java.util.*;
 
 public class Cart extends BaseEntity {
 	private Client client;
-	
+
 	private Map<Integer, CartItem> itemMap = Collections
 			.synchronizedMap(new HashMap<Integer, CartItem>());
 
 	private List<CartItem> itemList = new ArrayList<CartItem>();
-	
-	//function of dishes adding to the Cart
+
+	// function of dishes adding to the Cart
 	public void addDish(Dish dishes) {
 		CartItem cartItem = (CartItem) itemMap.get(dishes.getId());
 		if (cartItem == null) {
@@ -22,7 +22,8 @@ public class Cart extends BaseEntity {
 		}
 		cartItem.incrementQuantity();
 	}
-	//dishes removing by Id 
+
+	// dishes removing by Id
 	public boolean removeDishById(int itemId) {
 		CartItem cartItem = (CartItem) itemMap.remove(itemId);
 		return itemList.remove(cartItem);
