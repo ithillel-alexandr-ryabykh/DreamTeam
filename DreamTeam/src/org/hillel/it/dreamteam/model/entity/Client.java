@@ -20,8 +20,8 @@ public class Client extends BaseEntity {
 	}
 
 	//checking if this client already exists
-	public int clientIdEquals(int clientId) {
-		return this.clientId;
+	public boolean clientIdEquals(int clientId) {
+		return this.clientId==clientId;
 	}
 
 	public ClientType getClientType() {

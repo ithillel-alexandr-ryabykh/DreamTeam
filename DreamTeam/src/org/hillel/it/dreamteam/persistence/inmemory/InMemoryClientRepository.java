@@ -42,7 +42,7 @@ public class InMemoryClientRepository implements ClientRepository {
 	}
 
 	// to delete the client its index should be known. Here index can be get
-	public int getClientIndex(int clientId) {
+	private int getClientIndex(int clientId) {
 		for (int i = 0; i < clients.size(); i++) {
 			if (clients.get(i).clientIdEquals(clientId)) {
 				return i;
