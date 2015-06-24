@@ -307,7 +307,7 @@
                 <h5>Bowl Of Noodle Soup</h5>
                   <p>Pick the noodle and meat you like served in the mr. chef's special clear chicken broth with baby bai cai, water chestnut mushroom, choose a noodle by egg noodle by egg noodle, rice noodle, udon</p>   
                   <h5 class="indent">Vege Or Chicken Or Pork <span>10.95</span></h5>
-                  <h5 class="indent">Beef Or Shrimp <span>12.50</span>
+                  <h5 class="indent">Beef Or Shrimp <span>12.50</span></h5>
                   <h5 class="indent">Mr. Chef's: Shrimp, Chicken And Pork <span>13.95</span></h5>
               <h4>FRIED RICE</h4>
                   <h5>Vegetable <span>7.95</span></h5>
