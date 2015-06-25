@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,24 +23,24 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><small>厨师</small>
-					Mr. Chef's</a>
+				<a class="navbar-brand" href="index.jsp"><small>厨师</small> Mr.
+					Chef's</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav nav-pills navbar-left">
-					<li class="active"><a href="index.html"><span
+					<li class="active"><a href="index.jsp"><span
 							class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
 					</li>
-					<li><a href="menu.html"><span
+					<li><a href="menu.jsp"><span
 							class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
 							Menu</a></li>
-					<li><a href="online_order.html"><span
+					<li><a href="online_order.jsp"><span
 							class="glyphicon glyphicon-phone" aria-hidden="true"></span>
 							Online Order</a></li>
-					<li><a href="maps_and_directions.html"><span
+					<li><a href="maps_and_directions.jsp"><span
 							class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
 							Maps and Directions</a></li>
-					<li><a href="contact_us.html"><span
+					<li><a href="contact_us.jsp"><span
 							class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
 							Contact Us</a></li>
 				</ul>
@@ -110,17 +110,15 @@
 			<div class="col-sm-2 col-md-2">
 				<h4>Restaurant</h4>
 				<p>
-					<a href="menu.html">Menu</a> <br> <a href="online_order.html">Online
-						Order</a> <br> <a href="maps_and_directions.html">Maps and
+					<a href="menu.jsp">Menu</a> <br> <a href="online_order.jsp">Online
+						Order</a> <br> <a href="maps_and_directions.jsp">Maps and
 						Directions</a> <br>
 				</p>
 			</div>
 			<div class="col-sm-2 col-md-2">
 				<h4>About</h4>
 				<p>
-					<a href="contact_us.html">Contact Us</a> <br> <a
-						href="https://www.google.com/maps/place/Mr.+Chef's+Fine+Chinese+Cuisine+%26+Bar/@25.949719,-80.142875,3a,75y,229.19h,79.5t/data=!3m5!1e1!3m3!1s8QGvA5hTpGKnkP8zuxvsDw!2e0!3e2!4m2!3m1!1s0x0:0xd557dc5dc02faf8e!6m1!1e1?hl=en"
-						target="_blank">Virtual Tour</a>
+					<a href="contact_us.jsp">Contact Us</a> <br>
 				</p>
 			</div>
 		</div>
