@@ -1,14 +1,16 @@
 package org.hillel.it.dreamteam.application.service.impl;
 
+import java.util.List;
+
 import org.hillel.it.dreamteam.model.entity.Client;
-import org.hillel.it.dreamteam.persistence.inmemory.InMemoryClientRepository;
+import org.hillel.it.dreamteam.persistance.repository.impl.file.FileRepository;
 import org.hillel.it.dreamteam.persistence.repository.ClientRepository;
 import org.hillel.it.dreamteam.application.service.ClientService;
 
-;
 
 public class ClientServiceImpl implements ClientService {
-	ClientRepository repository = new InMemoryClientRepository();
+	//ClientRepository repository = new InMemoryClientRepository();
+	ClientRepository repository = FileRepository.getInstance().getClientRepository();
 
 	@Override
 	public void addClient(Client client) {
@@ -27,5 +29,9 @@ public class ClientServiceImpl implements ClientService {
 
 		return repository.findClientById(clientId);
 	}
+
+	@Override
+	public List<Client> findAll() {
+		return repository.findAll();	}
 
 }

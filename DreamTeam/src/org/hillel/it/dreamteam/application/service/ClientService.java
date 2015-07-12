@@ -1,5 +1,7 @@
 package org.hillel.it.dreamteam.application.service;
 
+import java.util.List;
+
 import org.hillel.it.dreamteam.model.entity.Client;
 
 public interface ClientService {
@@ -11,4 +13,7 @@ public interface ClientService {
 
 	// check the Client by Id
 	Client findClientById(int clientId);
+	
+	// get full client list
+	List<Client> findAll();
 }

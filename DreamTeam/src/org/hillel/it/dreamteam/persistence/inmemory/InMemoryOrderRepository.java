@@ -6,7 +6,7 @@ import org.hillel.it.dreamteam.persistence.repository.OrderRepository;
 import org.hillel.it.dreamteam.model.entity.Order;
 import org.hillel.it.dreamteam.model.entity.Options;
 
-public class InMemoryOrderRepository implements OrderRepository {
+public class InMemoryOrderRepository extends InMemoryBaseRepository<Order> implements OrderRepository {
 	List<Order> orderList = new ArrayList<Order>();
 
 	// shows the order by Id

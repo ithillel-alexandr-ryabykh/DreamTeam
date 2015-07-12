@@ -1,12 +1,13 @@
 package org.hillel.it.dreamteam.application.service.impl;
 import org.hillel.it.dreamteam.model.entity.Order;
 import org.hillel.it.dreamteam.model.entity.Options;
-import org.hillel.it.dreamteam.persistence.inmemory.InMemoryOrderRepository;
+import org.hillel.it.dreamteam.persistance.repository.impl.file.FileRepository;
 import org.hillel.it.dreamteam.persistence.repository.OrderRepository;
 import org.hillel.it.dreamteam.application.service.OrderService;;
 
 public class OrderServiceImpl implements OrderService {
-	OrderRepository repository = new InMemoryOrderRepository();
+	//OrderRepository repository = new InMemoryOrderRepository();
+	OrderRepository repository = FileRepository.getInstance().getOrderRepository();
 
 	@Override
 	public Order showOrderById(int id) {

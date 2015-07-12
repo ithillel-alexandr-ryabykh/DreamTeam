@@ -52,8 +52,8 @@ public class Dish extends BaseEntity {
 		return cost;
 	}
 
-	public void setCost(float cost) {
-		this.cost = cost;
+	public static void setCost(float cost) {
+		
 	}
 
 	public boolean isAvailability() {

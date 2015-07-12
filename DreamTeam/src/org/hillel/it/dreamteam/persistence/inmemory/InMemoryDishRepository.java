@@ -5,8 +5,13 @@ import java.util.*;
 import org.hillel.it.dreamteam.model.entity.Dish;
 import org.hillel.it.dreamteam.persistence.repository.DishRepository;
 
-public class InMemoryDishRepository implements DishRepository {
+public class InMemoryDishRepository extends InMemoryBaseRepository<Dish> implements DishRepository {
 	List<Dish> dishList = new ArrayList<Dish>();
+	// создать конструктор, который добавляет Dish,(5)
+	//создать header.jsp , вынести меню, вставить директивой/action
+	// в header.jsp создать bean через header.jsp usebean action
+	// в menu.jsp создать скриплет или jstl все блюда заменить, ф-ция find all dishes из сервиса, выводить параметеры свойств
+	//
 
 	// shows all dishes by name
 	@Override

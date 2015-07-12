@@ -5,7 +5,7 @@ import java.util.*;
 import org.hillel.it.dreamteam.model.entity.Client;
 import org.hillel.it.dreamteam.persistence.repository.ClientRepository;
 
-public class InMemoryClientRepository implements ClientRepository {
+public class InMemoryClientRepository extends InMemoryBaseRepository<Client> implements ClientRepository {
 
 	List<Client> clients = new ArrayList<Client>();
 

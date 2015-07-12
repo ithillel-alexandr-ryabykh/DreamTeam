@@ -3,6 +3,10 @@ package org.hillel.it.dreamteam.model.entity;
 import java.util.*;
 
 public class Cart extends BaseEntity {
+	/**
+	 * 
+	 */
+
 	private Client client;
 
 	private Map<Integer, CartItem> itemMap = Collections

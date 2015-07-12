@@ -1,5 +1,7 @@
 package org.hillel.it.dreamteam.model.entity;
 
+import java.util.ArrayList;
+
 public class Client extends BaseEntity {
 	private String firstName;
 	private String lastName;
@@ -8,6 +10,7 @@ public class Client extends BaseEntity {
 	private ClientType clientType;
 	private int clientId;
 	private String password;
+	private ArrayList payments;
 
 	public Client(String firstName, String lastName, String email,
 			String password, String telNumber) {
@@ -17,6 +20,10 @@ public class Client extends BaseEntity {
 		this.email = email;
 		this.password = password;
 		this.telNumber = telNumber;
+	}
+
+	public Client() {
+		// TODO Auto-generated constructor stub
 	}
 
 	//checking if this client already exists
@@ -78,6 +85,14 @@ public class Client extends BaseEntity {
 
 	public void setTelNumber(String telNumber) {
 		this.telNumber = telNumber;
+	}
+
+	public ArrayList getPayments() {
+		return payments;
+	}
+
+	public void setPayments(ArrayList payments) {
+		this.payments = payments;
 	}
 
 }

@@ -32,6 +32,10 @@ public class Order extends BaseEntity {
 		this.setTableNumber(tableNumber);
 	}
 
+	public Order() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getOrderId() {
 		return id;
 	}

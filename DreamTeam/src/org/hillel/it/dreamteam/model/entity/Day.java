@@ -68,22 +68,5 @@ public class Day {
 	public boolean isToday() {
 		return equals(new Day());
 	}
-/*
-	// checks if another day is the same as this one
-	public boolean equals(Day day) {
-		if (day == null) {
-			return false;
-		}
-		Calendar test = day.getCalendar();
-		return this.day.get(Calendar.ERA) == test.get(Calendar.ERA)
-				&& this.day.get(Calendar.YEAR) == test.get(Calendar.YEAR)
-				&& this.day.get(Calendar.DAY_OF_YEAR) == test
-						.get(Calendar.DAY_OF_YEAR);
-	}
 
-	@Override
-	public String toString() {
-		return format(FORMAT);
-	}
-	*/
 }

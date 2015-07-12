@@ -6,7 +6,7 @@ import org.hillel.it.dreamteam.model.entity.RestaurantAdmin;
 import org.hillel.it.dreamteam.model.entity.Dish;
 import org.hillel.it.dreamteam.persistence.repository.RestaurantAdminRepository;
 
-public class InMemoryRestaurantAdminRepository implements
+public class InMemoryRestaurantAdminRepository extends InMemoryBaseRepository<RestaurantAdmin> implements
 		RestaurantAdminRepository {
 
 	// checking if the dish available(present) or not

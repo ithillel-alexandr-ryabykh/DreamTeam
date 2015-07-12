@@ -1,5 +1,7 @@
 package org.hillel.it.dreamteam.persistence.repository;
 
+import java.util.List;
+
 import org.hillel.it.dreamteam.model.entity.Client;
 
 public interface ClientRepository {
@@ -11,4 +13,6 @@ public interface ClientRepository {
 	
 	//check the Client by Id
 	Client findClientById(int clientId);
+
+	List<Client> findAll();
 }
