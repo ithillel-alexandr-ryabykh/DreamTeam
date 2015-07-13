@@ -22,10 +22,9 @@ public class Dish extends BaseEntity {
 
 	}
 
-	public Dish(List<Dish> dishes, int id, String name, float cost,
+	public Dish(int id, String name, float cost,
 			boolean availability) {
 		super();
-		this.dishes = dishes;
 		this.id = id;
 		this.name = name;
 		this.cost = cost;

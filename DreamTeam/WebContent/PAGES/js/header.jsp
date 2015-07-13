@@ -8,7 +8,7 @@
 </head>
 <body>
 <jsp:useBean id= "service" scope= "application" class= "org.hillel.it.dreamteam.application.service.impl.DishServiceImpl"></jsp:useBean>
-<jsp:useBean id="user" class="org.hillel.it.dreamteam.model.entity.Dish"scope="session"></jsp:useBean>
+
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
