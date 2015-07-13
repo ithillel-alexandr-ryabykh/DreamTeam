@@ -5,66 +5,99 @@ import java.text.*;
 
 public class Day {
 
-	// default time
+	/**
+	 * Default time
+	 */
 	private final String FORMAT = "yyyy-MM-dd";
 
 	private final Calendar day;
 
-	// creation of new day instance for the current day
+	/**
+	 * Creation of new day instance for the current day
+	 */
 	public Day() {
 		day = Calendar.getInstance();
 	}
 
-	// creation of new day instance from Calendar
+	/**
+	 * Creation of new day instance from Calendar
+	 * 
+	 */
 	public Day(Calendar day) {
 		this.day = day;
 	}
 
-	// creating a new day instance from Date
+	/**
+	 * Creating a new day instance from Date
+	 * 
+	 */
 	public Day(Date date) {
 		this();
 		day.setTime(date);
 	}
 
-	// * creating a new day instance for any given day of the year, ignoring
-	// time,
+	 /**
+	  * Creating a new day instance for any given day of the year, ignoring time
+	  */
+	 
 
 	public Day(int year, int month, int dayOfMonth) {
 		day = new GregorianCalendar(year, month - 1, dayOfMonth);
 	}
 
-	// getting a day in calendar
+	/**
+	 * Getting a day in calendar
+	 * @return a day
+	 */
 	public Calendar getCalendar() {
 		return this.day;
 	}
 
-	// getting a time of date
+	/**
+	 * Getting a time of date
+	 * @return time
+	 */
 	public Date getDate() {
 		return this.day.getTime();
 	}
 
-	// getting the day in month
+	/**
+	 * Getting the day in month
+	 * @return date
+	 */
 	public int getDayOfMonth() {
 		return day.get(Calendar.DAY_OF_MONTH);
 	}
 
-	// getting the month
+	/**
+	 * Getting the month
+	 * @return month
+	 */
 	public int getMonth() {
 		return day.get(Calendar.MONTH) + 1;
 	}
 
-	// getting a year
+	/**
+	 * Getting a year
+	 * @return year
+	 */
 	public int getYear() {
 		return day.get(Calendar.YEAR);
 	}
 
-	// converting of the day format to string
+	/**
+	 * Converting of the day format to string
+	 * 
+	 */
 	public String format(String format) {
 		DateFormat df = new SimpleDateFormat(format);
 		return df.format(getDate());
 	}
 
-	// checking if it is today
+	/**
+	 * Checking if it is today
+	 * @return check is it true
+	 */
 	public boolean isToday() {
 		return equals(new Day());
 	}

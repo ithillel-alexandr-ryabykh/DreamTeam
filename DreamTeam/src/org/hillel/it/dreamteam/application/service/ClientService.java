@@ -5,15 +5,28 @@ import java.util.List;
 import org.hillel.it.dreamteam.model.entity.Client;
 
 public interface ClientService {
-	// adding of a new Client
+	/**
+	 * Adding of a new Client
+	 * @param client to declare new client
+	 */
 	void addClient(Client client);
 
-	// deleting of existing Client by Id
+	/**
+	 * Deleting of existing Client by Id
+	 * @param clientId unique client id
+	 */
 	void deleteClient(int clientId);
 
-	// check the Client by Id
+	/**
+	 * Check the Client by Id
+	 * @param clientId unique client id
+	 * @return list in which selected client is deleted
+	 */
 	Client findClientById(int clientId);
 	
-	// get full client list
+	/**
+	 * Get full client list
+	 * @return all list of clients
+	 */
 	List<Client> findAll();
 }

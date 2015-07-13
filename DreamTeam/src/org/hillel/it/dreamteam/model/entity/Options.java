@@ -6,8 +6,10 @@ public class Options extends BaseEntity {
 	private CartItem cartItem;
 	private boolean delivery;
 	private boolean taxi;
-
-	private int prepayment;// 30% of all cost,if total dish cost > X $
+/**
+ * Reduces 30% of all cost,if total dish cost > 5000 $
+ */
+	private int prepayment; 
 
 	public Options(boolean orderType, boolean taxi, int prepayment, int discount) {
 

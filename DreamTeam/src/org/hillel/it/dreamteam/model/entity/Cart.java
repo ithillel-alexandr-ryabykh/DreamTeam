@@ -3,9 +3,6 @@ package org.hillel.it.dreamteam.model.entity;
 import java.util.*;
 
 public class Cart extends BaseEntity {
-	/**
-	 * 
-	 */
 
 	private Client client;
 
@@ -14,7 +11,10 @@ public class Cart extends BaseEntity {
 
 	private List<CartItem> itemList = new ArrayList<CartItem>();
 
-	// function of dishes adding to the Cart
+	/**
+	 * Function of dishes adding to the Cart
+	 * 
+	 */
 	public void addDish(Dish dishes) {
 		CartItem cartItem = (CartItem) itemMap.get(dishes.getId());
 		if (cartItem == null) {
@@ -27,7 +27,13 @@ public class Cart extends BaseEntity {
 		cartItem.incrementQuantity();
 	}
 
-	// dishes removing by Id
+	/**
+	 * dishes removing by Id
+	 * 
+	 * @param itemId
+	 *            is unique number of dish
+	 * @return Showing list to prove that dish was deleted
+	 */
 	public boolean removeDishById(int itemId) {
 		CartItem cartItem = (CartItem) itemMap.remove(itemId);
 		return itemList.remove(cartItem);

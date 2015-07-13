@@ -3,7 +3,9 @@ package org.hillel.it.dreamteam.model.entity;
 import java.util.List;
 
 public class Dish extends BaseEntity {
-	// связать блюдо+цена+ид либо Map
+	/**
+	 * @availability shows if the current dish is present or not
+	 */
 	private List<Dish> dishes;
 	private int id;
 	private String name;

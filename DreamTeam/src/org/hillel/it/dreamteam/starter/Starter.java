@@ -11,7 +11,11 @@ import org.hillel.it.dreamteam.application.service.impl.ClientServiceImpl;
 import org.hillel.it.dreamteam.application.service.impl.PaymentServiceImpl;
 import org.hillel.it.dreamteam.model.entity.Client;
 import org.hillel.it.dreamteam.model.entity.Payment;
-
+/**
+ * 
+ * To identify, if client and payment creation were done
+ *
+ */
 public class Starter {
 	public static void main(String[] args) {
 		Client client1 = new Client();

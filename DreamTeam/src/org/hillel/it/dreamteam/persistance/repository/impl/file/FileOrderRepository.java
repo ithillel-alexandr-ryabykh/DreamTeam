@@ -6,11 +6,14 @@ import org.hillel.it.dreamteam.persistence.repository.OrderRepository;
 import org.hillel.it.dreamteam.model.entity.Order;
 import org.hillel.it.dreamteam.model.entity.Options;
 
-public class FileOrderRepository extends FileBaseRepository<Order> implements OrderRepository {
+public class FileOrderRepository extends FileBaseRepository<Order> implements
+		OrderRepository {
 
 	List<Order> orderList = new ArrayList<Order>();
 
-	// shows the order by Id
+	/**
+	 * Shows the order by Id
+	 */
 	@Override
 	public Order showOrderById(int id) {
 		for (Order order : orderList) {
@@ -21,7 +24,9 @@ public class FileOrderRepository extends FileBaseRepository<Order> implements Or
 		return null;
 	}
 
-	// adding a new order
+	/**
+	 * Adding a new order
+	 */
 	@Override
 	public boolean addOrder(Order order, int id) {
 		if (order.getOrderId() == 0) {
@@ -31,7 +36,9 @@ public class FileOrderRepository extends FileBaseRepository<Order> implements Or
 		return false;
 	}
 
-	// changing of order
+	/**
+	 * Changing of order
+	 */
 	@Override
 	public boolean changeOrder(Order existingOrder, Order newOrder) {
 		if (orderList.remove(existingOrder)) {
@@ -40,7 +47,9 @@ public class FileOrderRepository extends FileBaseRepository<Order> implements Or
 		return false;
 	}
 
-	// deleting of existing order
+	/**
+	 * Deleting of existing order
+	 */
 	@Override
 	public void deleteOrder(int id) {
 		for (Order order : orderList) {
@@ -51,7 +60,9 @@ public class FileOrderRepository extends FileBaseRepository<Order> implements Or
 
 	}
 
-	// checking if additional services are needed
+	/**
+	 * Checking if additional services are needed
+	 */
 	@Override
 	public boolean extraService(Options service, boolean delivery,
 			boolean taxy, int discount, int prepayment) {

@@ -10,6 +10,12 @@ public abstract class FileBaseRepository<T extends BaseEntity> {
 	protected HashMap<Integer, T> storage;
 	protected int nextId = 1;
 
+	/**
+	 * Saving of new instance
+	 * 
+	 * @param entityObject
+	 *            new instance that should be saved
+	 */
 	public void save(T entityObject) {
 		if (entityObject.getId() == 0) {
 			entityObject.setId(nextId);
@@ -22,6 +28,12 @@ public abstract class FileBaseRepository<T extends BaseEntity> {
 
 	}
 
+	/**
+	 * Deleting of existing instance
+	 * 
+	 * @param entityObject
+	 *            existing instance
+	 */
 	public void delete(T entityObject) {
 		storage.remove(entityObject.getId());
 		FileRepository.getInstance().serialize();

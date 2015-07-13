@@ -5,10 +5,13 @@ import java.util.*;
 import org.hillel.it.dreamteam.model.entity.Client;
 import org.hillel.it.dreamteam.persistence.repository.ClientRepository;
 
-public class FileClientRepository extends FileBaseRepository<Client> implements ClientRepository {
+public class FileClientRepository extends FileBaseRepository<Client> implements
+		ClientRepository {
 	List<Client> clients = new ArrayList<Client>();
 
-	// function of client checking by Id
+	/**
+	 * Function of client checking by Id
+	 */
 	@Override
 	public Client findClientById(int clientId) {
 		for (Client client : clients) {
@@ -19,7 +22,9 @@ public class FileClientRepository extends FileBaseRepository<Client> implements 
 		return (Client) null;
 	}
 
-	// checking if the client present,and adding if not
+	/**
+	 * Checking if the client present,and adding if not
+	 */
 	@Override
 	public boolean addClient(Client client, int clientId) {
 		if (findClientById(client.getClientId()) == null) {
@@ -29,7 +34,9 @@ public class FileClientRepository extends FileBaseRepository<Client> implements 
 		return false;
 	}
 
-	// deleting of existing client
+	/**
+	 * Deleting of existing client
+	 */
 	@Override
 	public boolean deleteClient(int clientId) {
 		int clientIndex = getClientIndex(clientId);
@@ -40,7 +47,10 @@ public class FileClientRepository extends FileBaseRepository<Client> implements 
 		return false;
 	}
 
-	// to delete the client its index should be known. Here index can be get
+	/**
+	 * To delete the client its index should be known. Here index can be get
+	 *
+	 */
 	private int getClientIndex(int clientId) {
 		for (int i = 0; i < clients.size(); i++) {
 			if (clients.get(i).clientIdEquals(clientId)) {

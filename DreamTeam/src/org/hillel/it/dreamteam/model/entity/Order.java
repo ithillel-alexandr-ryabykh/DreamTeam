@@ -2,8 +2,6 @@ package org.hillel.it.dreamteam.model.entity;
 
 import java.util.*;
 
-//+registration,login,Order creation,payment;
-
 public class Order extends BaseEntity {
 	private int id;
 	private int tableNumber;

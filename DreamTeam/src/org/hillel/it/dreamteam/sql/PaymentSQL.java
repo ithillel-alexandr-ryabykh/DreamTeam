@@ -13,7 +13,9 @@ import org.hillel.it.dreamteam.model.entity.Payment;
 import org.hillel.it.dreamteam.persistence.repository.PaymentRepository;
 
 public class PaymentSQL extends MainDB implements PaymentRepository{
-
+/**
+ * Function that shows payment by id
+ */
 	@SuppressWarnings("null")
 	@Override
 	public synchronized Payment findById(int id) {
@@ -55,7 +57,9 @@ public class PaymentSQL extends MainDB implements PaymentRepository{
 		return null;
 	}
 
-
+/**
+ * Function that deletes payment  
+ */
 	@SuppressWarnings("unused")
 	@Override
 	public synchronized void delete(Payment payment) {
@@ -82,7 +86,9 @@ public class PaymentSQL extends MainDB implements PaymentRepository{
 
 
 	
-
+/**
+ * Function that shows list of all payments
+ */
 	@SuppressWarnings("rawtypes")
 	@Override
 	public List<Payment> findAll() {

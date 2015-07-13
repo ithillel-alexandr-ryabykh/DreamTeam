@@ -1,12 +1,21 @@
 package org.hillel.it.dreamteam.model.entity;
 
 public class CartItem extends BaseEntity {
+	/**
+	 * @item to set the dish item
+	 * @quantity to set the quantity of items
+	 * @comments to write necessary points according to the dish
+	 * @discount is calculated if total dish cost is more than 5000 $
+	 */
 	private Dish item;
 	private int quantity;
 	private String comments;
-	private int discount;// if total dish cost is more than X $
+	private int discount; 
 
-	// checking of total dish cost for discount
+	/**
+	 * Checking of total dish cost for discount
+	 * @param cartItem shows quantity of dishes in a Cart
+	 */
 	void dishCost(CartItem cartItem) {
 		if (item.getCost() * quantity > 5000) {
 			discount = (int) (0.3 * item.getCost() * quantity);
@@ -45,12 +54,17 @@ public class CartItem extends BaseEntity {
 		this.quantity = quantity;
 	}
 
-	// after adding the dish to cart, quantity increases
+	/**
+	 * After adding the dish to cart, quantity increases
+	 */
 	public void incrementQuantity() {
 		quantity++;
 	}
 
-	// calculating of all dish cost
+	/**
+	 * Calculating of all dish cost
+	 * @return total cost
+	 */
 	private float calculateTotal() {
 		return item.getCost() * quantity;
 	}

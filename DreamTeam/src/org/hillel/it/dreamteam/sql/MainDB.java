@@ -8,13 +8,19 @@ public class MainDB {
 
 	private String url = "jdbc:mysql://localhost/restaurant";
 	private Connection dbh;
-	
+	/**
+	 * Creation of tables and columns with corresponding names
+	 */
 	public static final String CLIENT_TABLE = "Clients";
 	public static final String ORDER_TABLE = "Orders";
 	public static final String PAYMENT_TABLE = "Payment";
 	public static final String COLUMN_CREATED_AT = "createdat DATE NOT NULL";
 	public static final String COLUMN_CREATED_BY = "createdby INT";
 
+	/**
+	 * Starting a connection, if it wasn't done earlier
+	 * @return true, if it was successful
+	 */
 	public synchronized boolean startConection() {
 		try {
 			if (dbh == null) {
@@ -27,7 +33,10 @@ public class MainDB {
 			return false;
 		}
 	}
-
+/**
+ * Close a connection
+ * @return true if it was closed
+ */
 	public synchronized boolean closeConection() {
 		try {
 			dbh.close();

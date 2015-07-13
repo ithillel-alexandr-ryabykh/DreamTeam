@@ -2,7 +2,7 @@ package org.hillel.it.dreamteam.model.entity;
 
 public class Payment extends BaseEntity{
 	/**
-	 * 
+	 * @amount to get exact total amount of money
 	 */
 	private static final long serialVersionUID = 1L;
 	private int amount;

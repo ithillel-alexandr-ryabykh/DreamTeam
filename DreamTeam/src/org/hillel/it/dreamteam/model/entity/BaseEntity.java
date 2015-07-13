@@ -1,12 +1,16 @@
-//pmd for eclipse luna-pmd for eclipse site-copy URL-help-install new soft-past URL
-//add-PMD-OK-PMD for Eclipse 4-next
 package org.hillel.it.dreamteam.model.entity;
-
-//functions get... change for find
+/**
+ * @author Alexander Ruabykh
+ */
 import java.io.Serializable;
 import java.util.Date;
 
 public class BaseEntity implements Serializable {
+	/**
+	 * @id for serial number 
+	 * @createdAt to declare when it was created
+	 * @createdBy to declare who created
+	 */
 	private int id;
 	private Date createdAt;
 	private Client createdBy;

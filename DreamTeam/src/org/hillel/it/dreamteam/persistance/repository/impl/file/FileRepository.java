@@ -16,7 +16,9 @@ import org.hillel.it.dreamteam.persistence.repository.ClientRepository;
 import org.hillel.it.dreamteam.persistence.repository.OrderRepository;
 
 public class FileRepository {
-
+/**
+ * Creating instanced of repositories
+ */
 	private static FileRepository instance;
 	private FileDishRepository dishRepository;
 	private FileOrderRepository orderRepository;
@@ -34,14 +36,19 @@ public class FileRepository {
 	protected FileRepository(int number) {
 
 	}
-
+/**
+ * Checking if file repository exists or not
+ * @return new created instance
+ */
 	public static FileRepository getInstance() {
 		if (instance == null) {
 			instance = new FileRepository();
 		}
 		return instance;
 	}
-
+/**
+ * Function to serialize existing repositories in filerepository.bin
+ */
 	public void serialize() {
 
 		try (FileOutputStream fos = new FileOutputStream("filerepository.bin");
@@ -55,7 +62,9 @@ public class FileRepository {
 		}
 
 	}
-
+/**
+ * Function to deserialize existing repositories from filerepository.bin
+ */
 	@SuppressWarnings({ "unchecked" })
 	public void deserialize() {
 		try (FileInputStream fis = new FileInputStream("filerepository.bin");

@@ -3,6 +3,9 @@ package org.hillel.it.dreamteam.model.entity;
 import java.util.ArrayList;
 
 public class Client extends BaseEntity {
+	/**
+	 * @clientType to designate who wants to log in
+	 */
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -26,7 +29,11 @@ public class Client extends BaseEntity {
 		// TODO Auto-generated constructor stub
 	}
 
-	//checking if this client already exists
+	/**
+	 * Checking if this client already exists
+	 * @param clientId stands for unique client id
+	 * @return the identity
+	 */
 	public boolean clientIdEquals(int clientId) {
 		return this.clientId==clientId;
 	}

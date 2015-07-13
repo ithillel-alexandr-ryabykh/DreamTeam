@@ -14,7 +14,9 @@ import org.hillel.it.dreamteam.model.entity.Client;
 import org.hillel.it.dreamteam.persistence.repository.ClientRepository;
 
 public class ClientSQL extends MainDB implements ClientRepository {
-
+/**
+ * Insertion into tables clients with necessary fields
+ */
 	@Override
 	public synchronized boolean addClient(Client client, int clientId) {
 		if (startConection()) {
@@ -55,7 +57,9 @@ public class ClientSQL extends MainDB implements ClientRepository {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+/**
+ * Function that finds a client by id
+ */
 	@Override
 	public synchronized Client findClientById(int clientId) {
 		if (startConection()) {
@@ -85,7 +89,9 @@ public class ClientSQL extends MainDB implements ClientRepository {
 		}
 		return null;
 	}
-
+/**
+ * Function that deletes a client by id
+ */
 	@Override
 	public synchronized boolean deleteClient(int clientId) {
 		if (startConection()) {
@@ -108,7 +114,9 @@ public class ClientSQL extends MainDB implements ClientRepository {
 
 		return false;
 	}
-
+/**
+ * Function that gives a list with all clients and all information about them
+ */
 	@SuppressWarnings("rawtypes")
 	@Override
 	public List<Client> findAll() {
