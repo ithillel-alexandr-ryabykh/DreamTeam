@@ -14,7 +14,7 @@ public class ClientServiceImpl implements ClientService {
 
 	@Override
 	public void addClient(Client client) {
-		repository.addClient(client);
+		repository.addClient(client, 0);
 
 	}
 

@@ -22,23 +22,23 @@ public class InMemoryClientRepository extends InMemoryBaseRepository<Client> imp
 
 	// checking if the client present,and adding if not
 	@Override
-	public void addClient(Client client) {
+	public boolean addClient(Client client, int clientId) {
 		if (findClientById(client.getClientId()) == null) {
 			clients.add(client);
-			return;
+			return true;
 		}
-		return;
+		return false;
 	}
 
 	// deleting of existing client
 	@Override
-	public void deleteClient(int clientId) {
+	public boolean deleteClient(int clientId) {
 		int clientIndex = getClientIndex(clientId);
 		if (clientIndex > 0) {
 			clients.remove(clientIndex);
-			return;
+			return true;
 		}
-		return;
+		return false;
 	}
 
 	// to delete the client its index should be known. Here index can be get

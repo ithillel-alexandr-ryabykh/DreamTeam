@@ -1,12 +1,16 @@
 package org.hillel.it.dreamteam.model.entity;
 
 public class Payment extends BaseEntity{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int amount;
-	private Client client;
+	private Client clientID;
 
 	public Payment(int i, Client client2) {
 		this.amount = amount;
-		this.client = client;
+		this.clientID = clientID;
 	}
 
 	public int getAmount() {
@@ -18,11 +22,21 @@ public class Payment extends BaseEntity{
 	}
 
 	public Client getClient() {
-		return client;
+		return clientID;
 	}
 
-	public void setClient(Client client) {
-		this.client = client;
+	public void setClient(Client client1) {
+		this.clientID = client1;
+	}
+
+	public void addPayment(Payment payment) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setClient(Integer integer) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

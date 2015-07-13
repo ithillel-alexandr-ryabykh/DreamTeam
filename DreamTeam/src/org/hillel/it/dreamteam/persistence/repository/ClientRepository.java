@@ -6,10 +6,10 @@ import org.hillel.it.dreamteam.model.entity.Client;
 
 public interface ClientRepository {
 	//adding of a new Client
-	void addClient(Client client);
+	boolean addClient(Client client, int clientId);
 	
 	//deleting of existing Client by Id
-	void deleteClient(int clientId);
+	boolean deleteClient(int clientId);
 	
 	//check the Client by Id
 	Client findClientById(int clientId);

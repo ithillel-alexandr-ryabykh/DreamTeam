@@ -95,4 +95,9 @@ public class Client extends BaseEntity {
 		this.payments = payments;
 	}
 
+	public void addClient(Client client) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
