@@ -11,7 +11,8 @@ public class Dish extends BaseEntity {
 	private String name;
 	private float cost;
 	private boolean availability;
-
+	private String comment;
+	
 	void dishAvailability() {
 
 	}
@@ -25,12 +26,13 @@ public class Dish extends BaseEntity {
 	}
 
 	public Dish(int id, String name, float cost,
-			boolean availability) {
+			boolean availability, String comment) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cost = cost;
 		this.availability = availability;
+		this.comment = comment;
 	}
 
 	public int getId() {
@@ -72,5 +74,15 @@ public class Dish extends BaseEntity {
 	public void setDishes(List<Dish> dishes) {
 		this.dishes = dishes;
 	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+	
+	
 
 }

@@ -11,7 +11,7 @@ public class InMemoryDishRepository extends InMemoryBaseRepository<Dish> impleme
 	//создать header.jsp , вынести меню, вставить директивой/action
 	// в header.jsp создать bean через header.jsp usebean action
 	// в menu.jsp создать скриплет или jstl все блюда заменить, ф-ция find all dishes из сервиса, выводить параметеры свойств
-	//
+	//java mail library
 
 	// shows all dishes by name
 	@Override

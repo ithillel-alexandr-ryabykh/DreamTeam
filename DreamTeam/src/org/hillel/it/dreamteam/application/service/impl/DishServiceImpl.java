@@ -11,18 +11,14 @@ import org.hillel.it.dreamteam.application.service.DishService;
 ;
 
 public class DishServiceImpl implements DishService {
-	public static void main(String[] args) {
-		List<String> dishList = new ArrayList<String>();
-	dishList.add(1, "Roast Duck (Half)");
-	dishList.add(2, "Crispy Honey Chicken");
-	dishList.add(3, "Sweet & Sour Chicken");
-	dishList.add(4, "Lemon Chicken");
-	dishList.add(5, "Sesame Chicken");
-	}
+	
+		
 	
 								
 	  
 	
+	
+
 	//DishRepository repository = new InMemoryDishRepository();
 	DishRepository repository = FileRepository.getInstance().getDishRepository();
 
@@ -34,7 +30,18 @@ public class DishServiceImpl implements DishService {
 
 	@Override
 	public List<Dish> findAllDishes() {
-		return repository.findAllDishes();
+		//return repository.findAllDishes();
+		List<Dish> dishList = new ArrayList<>();
+		dishList.add(new Dish(1, "Roast Duck (Half)",25,true,"Crispy hong kong style roast duck"));
+		dishList.add(new Dish(2, "Crispy Honey Chicken",33,true, "Lightly battered with sesame seed"));
+		dishList.add(new Dish(3, "Sweet & Sour Chicken", 22, true, "Lightly battered with pineapple, bell pepper and carrots"));
+		dishList.add(new Dish(4, "Lemon Chicken", 18, true, "Lightly battered with lemon sauc"));
+		dishList.add(new Dish(5, "Sesame Chicken", 40, true, "Tender chicken, broccoli in spicy sesame sauce"));
+		dishList.add(new Dish(6, "General Tso's Chicken", 20, true, "Lightly battered with sweet and chili flavor sauce"));
+		dishList.add(new Dish(7, "Orange Peel Chicken", 35, true, "Tender chicken, broccoli, orange peel with sweet szechuan sauce"));
+
+		return dishList;
+				
 
 	}
 
