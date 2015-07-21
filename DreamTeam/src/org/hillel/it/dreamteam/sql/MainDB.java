@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class MainDB {
 
-	private String url = "jdbc:mysql://localhost/restaurant";
+	private String url = "jdbc:derby:restaurant; create=true";
 	private Connection dbh;
 	/**
 	 * Creation of tables and columns with corresponding names
