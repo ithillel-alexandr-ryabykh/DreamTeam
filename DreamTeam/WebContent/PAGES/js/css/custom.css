@@ -39,7 +39,7 @@ body {
 .menu p {
 	font-style: italic;
 	font-size: 12px;
-	margin-top: -7px;
+	margin-top: 0px;
 }
 
 .menu h3, h4, h5 {
